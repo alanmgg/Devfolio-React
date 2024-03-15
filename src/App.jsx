@@ -1,14 +1,12 @@
-import "./index.css";
+import Header from "./components/Header";
+import ButtonTheme from "./components/ButtonTheme";
 
 function App() {
   return (
     <>
-      <div class="w-screen h-screen bg-gradient-to-t from-gray-50 to-gray-300">
-        <button class="mx-5 my-8 p-2 hover:bg-slate-400">Noche</button>
-
-        <header class="container mx-auto px-[224px] font-open-sans">
-          <h1 class="font-medium text-3xl">Alan Francisco Mora</h1>
-        </header>
+      <div class="w-screen h-screen (bg-gradient-to-t from-gray-50 to-gray-300) dark:bg-gradient-to-t from-slate-900 to-slate-700">
+        <ButtonTheme />
+        <Header />
       </div>
     </>
   );
