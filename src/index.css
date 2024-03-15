@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-open-sans {
+  font-family: open-sans, sans-serif;
+}
+
+.font-noto-sans {
+  font-family: noto-sans, sans-serif;
+}
