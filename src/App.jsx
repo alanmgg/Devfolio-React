@@ -4,8 +4,9 @@ import ButtonTheme from "./components/ButtonTheme";
 function App() {
   return (
     <>
-      <div class="w-screen h-screen (bg-gradient-to-t from-gray-50 to-gray-300) dark:bg-gradient-to-t from-slate-900 to-slate-700">
+      <div className="w-screen h-screen bg-gradient-to-t from-gray-50 dark:from-slate-900 to-gray-300 dark:to-slate-700">
         <ButtonTheme />
+
         <Header />
       </div>
     </>
