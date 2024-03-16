@@ -5,7 +5,7 @@ import profileImage from "./../assets/Profile.webp";
 function Header() {
   return (
     <>
-      <header className="container mx-auto px-[300px] xl:px-0 font-open-sans flex flex-row xl:flex-col items-center">
+      <header className="font-open-sans flex flex-row xl:flex-col items-center">
         <div className="mr-12 xl:mr-0 xl:mb-5 xl:items-center">
           <img
             src={profileImage}

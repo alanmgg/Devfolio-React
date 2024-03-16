@@ -5,11 +5,13 @@ import SpanColor from "./SpanColor";
 function CardInfo() {
   return (
     <>
-      <div className="container mx-auto mt-12 px-[300px] xl:px-0 font-open-sans flex flex-row xl:flex-col items-center">
-        <div class="max-w-sm p-4 bg-gray-200 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-slate-800">
-          <h5 class="font-bold sm:text-sm dark:text-white">Sobre mí</h5>
+      <div className="font-open-sans flex xl:flex-col items-center">
+        <div className="p-4 bg-gray-200 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-slate-800">
+          <h5 className="font-bold sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2">
+            Sobre mí
+          </h5>
 
-          <p class="mt-8 text-sm sm:text-xs font-medium text-gray-700 dark:text-gray-300">
+          <p className="mt-8 text-sm sm:text-xs font-medium text-gray-700 dark:text-gray-300">
             <SpanColor label="Ingeniero" /> especializado en el desarrollo de
             aplicaciones <SpanColor label="web" /> y{" "}
             <SpanColor label="móviles" />, con enfoque en la resolución de

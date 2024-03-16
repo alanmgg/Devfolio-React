@@ -1,0 +1,16 @@
+{
+  "tabs": [
+    {
+      "field": "proyects",
+      "name": "Proyectos"
+    },
+    {
+      "field": "about me",
+      "name": "Sobre mí"
+    },
+    {
+      "field": "contact",
+      "name": "Contacto"
+    }
+  ]
+}

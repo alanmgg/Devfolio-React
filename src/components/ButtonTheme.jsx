@@ -18,12 +18,11 @@ function ButtonTheme() {
 
   return (
     <>
-      <button className="w-11 ml-5 my-8 p-3 hover:bg-slate-100 text-xl dark:text-gray-400 dark:hover:bg-slate-600">
-        {theme === "light" ? (
-          <FaRegMoon onClick={handleChangeTheme} />
-        ) : (
-          <FaRegSun onClick={handleChangeTheme} />
-        )}
+      <button
+        className="w-11 ml-5 my-8 p-3 hover:bg-slate-100 text-xl dark:text-gray-400 dark:hover:bg-slate-600"
+        onClick={handleChangeTheme}
+      >
+        {theme === "light" ? <FaRegMoon /> : <FaRegSun />}
       </button>
     </>
   );
