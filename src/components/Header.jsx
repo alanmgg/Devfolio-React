@@ -15,7 +15,7 @@ function Header() {
           />
         </div>
 
-        <div className="">
+        <div>
           <p className="text-base sm:text-sm dark:text-white">
             Ingeniero en computación - Software Engineer DevOps
           </p>
