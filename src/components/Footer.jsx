@@ -12,8 +12,8 @@ function Footer() {
 
   return (
     <>
-      <footer className="mx-auto mt-[100px] mb-[80px] px-[300px] xl:px-10 font-open-sans flex flex-col items-center">
-        <p className="mt-5 text-center text-base sm:text-sm text-fuchsia-600 dark:text-lime-300">
+      <footer className="mt-[100px] mb-[80px] flex flex-col items-center border-t border-fuchsia-600 dark:border-lime-400">
+        <p className="mt-6 font-bold text-center text-sm sm:text-xs text-fuchsia-600 dark:text-lime-400">
           Copyright {year !== null ? year : "2024"}. All right reserved by Alan
           Francisco Mora González
         </p>

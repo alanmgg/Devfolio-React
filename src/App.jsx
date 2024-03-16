@@ -26,7 +26,9 @@ function App() {
             </div>
           </div>
 
-          <Footer />
+          <div className="px-[300px] xl:px-6">
+            <Footer />
+          </div>
         </div>
       </div>
     </>
