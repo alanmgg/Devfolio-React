@@ -20,7 +20,7 @@ function Header() {
             Ingeniero en computación - Software Engineer DevOps
           </p>
 
-          <h1 className="font-medium text-4xl sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-600 dark:to-lime-500 bg-clip-text text-transparent">
+          <h1 className="font-bold text-3xl sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-600 dark:to-lime-500 bg-clip-text text-transparent">
             Alan Francisco Mora
           </h1>
 
