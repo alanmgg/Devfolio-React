@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonTheme from "./components/ButtonTheme";
 import Header from "./components/Header";
 import CardInfo from "./components/CardInfo";
 import ButtonSelect from "./components/ButtonSelect";
+import BentoGridProjects from "./components/BentoGridProjects";
 import Footer from "./components/Footer";
 
 function App() {
+  const [viewTab, setViewTab] = useState("projects");
+
+  function onSelectViewTab(selectViewTab) {
+    setViewTab(selectViewTab);
+  }
+
   return (
     <>
       <div className="w-full h-full bg-gradient-to-t from-gray-50 dark:from-slate-900 to-gray-300 dark:to-slate-700">
@@ -22,7 +29,9 @@ function App() {
             </div>
 
             <div className="col-span-4 mt-12 xl:mt-6">
-              <ButtonSelect />
+              <ButtonSelect onSelectViewTab={onSelectViewTab} />
+
+              {viewTab === "projects" ? <BentoGridProjects /> : null}
             </div>
           </div>
 

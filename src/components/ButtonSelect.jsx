@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import TabsJson from "./../config/tabs.json";
 
-function ButtonSelect() {
+function ButtonSelect({ onSelectViewTab }) {
   const [tabs, setTabs] = useState(null);
-  const [selected, setSelected] = useState("proyects");
+  const [selected, setSelected] = useState("projects");
 
   useEffect(() => {
     if (TabsJson !== null && TabsJson !== undefined) {
       setTabs(TabsJson.tabs);
     }
   }, []);
+
+  useEffect(() => {
+    onSelectViewTab(selected);
+  }, [selected]);
 
   return (
     <>

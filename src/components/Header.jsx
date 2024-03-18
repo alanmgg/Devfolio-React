@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonInfo from "./ButtonInfo";
-import profileImage from "./../assets/Profile.webp";
 
 function Header() {
   return (
@@ -8,7 +7,7 @@ function Header() {
       <header className="font-open-sans flex flex-row xl:flex-col items-center">
         <div className="mr-12 xl:mr-0 xl:mb-5 xl:items-center">
           <img
-            src={profileImage}
+            src="/img/Profile.webp"
             alt="Profile"
             width={250}
             className="rounded-full"
