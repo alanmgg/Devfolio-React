@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import ButtonInfo from "./ButtonInfo";
 
 function Header() {
@@ -6,11 +8,12 @@ function Header() {
     <>
       <header className="font-open-sans flex flex-row xl:flex-col items-center">
         <div className="mr-12 xl:mr-0 xl:mb-5 xl:items-center">
-          <img
+          <LazyLoadImage
             src="/img/Profile.webp"
             alt="Profile"
             width={250}
             className="rounded-full"
+            effect="blur"
           />
         </div>
 
