@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import ProjectsJson from "./../config/projects.json";
 
 function BentoGridProjects() {
@@ -17,10 +19,11 @@ function BentoGridProjects() {
           ? projects.map((item) => (
               <div className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-500 hover:scale-105 hover:animate-pulse">
                 <div className="bg-gray-200 dark:bg-slate-800 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
-                  <img
+                  <LazyLoadImage
                     src={"/projects/" + item.image}
                     alt={item.name}
                     className="rounded-lg w-full"
+                    effect="blur"
                   />
 
                   <div className="p-4">
