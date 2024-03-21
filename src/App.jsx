@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import CardInfo from "./components/CardInfo";
 import ButtonSelect from "./components/ButtonSelect";
 import BentoGridProjects from "./components/BentoGridProjects";
+import CardTechnologies from "./components/CardTechnologies";
 import Footer from "./components/Footer";
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
               <ButtonSelect onSelectViewTab={onSelectViewTab} />
 
               {viewTab === "projects" ? <BentoGridProjects /> : null}
+              {viewTab === "about me" ? (
+                <div>
+                  <CardTechnologies />
+                </div>
+              ) : null}
             </div>
           </div>
 

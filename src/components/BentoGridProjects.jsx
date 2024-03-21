@@ -14,10 +14,13 @@ function BentoGridProjects() {
 
   return (
     <div className="font-open-sans mt-8">
-      <div className="columns-2 md:columns-1 gap-4 md:gap-1">
+      <div className="columns-2 sm:columns-1 gap-4 md:gap-1">
         {projects !== null
           ? projects.map((item) => (
-              <div className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-500 hover:scale-105 hover:animate-pulse">
+              <div
+                className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-500 hover:scale-105 hover:animate-pulse"
+                key={item.name}
+              >
                 <div className="bg-gray-200 dark:bg-slate-800 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
                   <LazyLoadImage
                     src={"/projects/" + item.image}
