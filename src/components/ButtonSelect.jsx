@@ -32,8 +32,8 @@ function ButtonSelect({ onSelectViewTab }) {
                   <button
                     className={
                       item.field === selected
-                        ? "font-bold sm:text-sm text-fuchsia-600 dark:text-lime-400 p-2"
-                        : "font-bold sm:text-sm dark:text-white p-2"
+                        ? "w-full font-bold sm:text-sm text-fuchsia-600 dark:text-lime-400 p-2 transition duration-100 hover:scale-105"
+                        : "w-full font-bold sm:text-sm dark:text-white p-2 transition duration-100 hover:scale-105"
                     }
                   >
                     {item.name}

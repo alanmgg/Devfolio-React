@@ -17,13 +17,13 @@ function Header() {
           />
         </div>
 
-        <div>
+        <div className="xl:text-center xl:flex xl:flex-col xl:items-center">
           <p className="text-base sm:text-sm dark:text-white">
             Ingeniero en computación - Software Engineer DevOps
           </p>
 
-          <h1 className="font-bold text-3xl sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-600 dark:to-lime-500 bg-clip-text text-transparent">
-            Alan Francisco Mora
+          <h1 className="font-bold text-3xl sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-500 dark:to-lime-500 bg-clip-text text-transparent">
+            Alan Francisco Mora González
           </h1>
 
           <p className="font-medium text-lg sm:text-base mt-3 dark:text-white">

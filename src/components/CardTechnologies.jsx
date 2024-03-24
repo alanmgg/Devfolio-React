@@ -23,7 +23,7 @@ function CardTechnologies() {
           {technologies !== null
             ? technologies.map((item) => (
                 <div
-                  className="mb-3 cursor-pointer transform transition duration-500 hover:scale-105 hover:animate-pulse"
+                  className="mb-3 cursor-pointer transform transition duration-100 hover:scale-105"
                   key={item.name}
                 >
                   <div className="bg-gray-200 dark:bg-slate-800 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 flex items-center px-5 h-12">
