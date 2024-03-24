@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full bg-gradient-to-t from-zinc-50 dark:from-slate-900 to-gray-200 dark:to-slate-700">
+      <div className="w-full h-full bg-gradient-to-t from-zinc-200 dark:from-gray-800 to-zinc-100 dark:to-gray-900">
         <div className="flex flex-col font-open-sans">
           <ButtonTheme />
 

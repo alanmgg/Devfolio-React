@@ -6,7 +6,7 @@ function CardInfo() {
   return (
     <>
       <div className="font-open-sans flex xl:flex-col items-center">
-        <div className="p-4 bg-gray-200 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-slate-800">
+        <div className="p-4 bg-stone-100 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-gray-900">
           <h5 className="font-bold text-lg sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2">
             Sobre mí
           </h5>
