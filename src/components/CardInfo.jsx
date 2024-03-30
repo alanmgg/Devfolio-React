@@ -52,11 +52,11 @@ function CardInfo() {
             <div className="flex flex-row items-center">
               <FaEdge className="text-xs text-gray-700 dark:text-gray-300 mr-3" />
               <a
-                href="https://www.alanfmorag.tech/"
+                href="https://www.alancoding.tech/"
                 target="_blank"
                 className="text-sm sm:text-xs text-gray-700 dark:text-gray-300"
               >
-                https://www.alanfmorag.tech/
+                https://www.alancoding.tech/
               </a>
             </div>
           </div>
