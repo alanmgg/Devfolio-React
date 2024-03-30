@@ -1,12 +1,12 @@
 {
   "tabs": [
     {
-      "field": "projects",
-      "name": "Proyectos"
+      "field": "experience",
+      "name": "Experiencia"
     },
     {
-      "field": "about me",
-      "name": "Sobre mí"
+      "field": "projects",
+      "name": "Proyectos"
     },
     {
       "field": "contact",

@@ -3,7 +3,7 @@ import TabsJson from "./../config/tabs.json";
 
 function ButtonSelect({ onSelectViewTab }) {
   const [tabs, setTabs] = useState(null);
-  const [selected, setSelected] = useState("projects");
+  const [selected, setSelected] = useState("experience");
 
   useEffect(() => {
     if (TabsJson !== null && TabsJson !== undefined) {

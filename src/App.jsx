@@ -3,8 +3,8 @@ import ButtonTheme from "./components/ButtonTheme";
 import Header from "./components/Header";
 import CardInfo from "./components/CardInfo";
 import ButtonSelect from "./components/ButtonSelect";
+import Experience from "./views/Experience";
 import BentoGridProjects from "./components/BentoGridProjects";
-import CardTechnologies from "./components/CardTechnologies";
 import Footer from "./components/Footer";
 
 function App() {
@@ -32,12 +32,8 @@ function App() {
             <div className="col-span-4 mt-12 xl:mt-6">
               <ButtonSelect onSelectViewTab={onSelectViewTab} />
 
+              {viewTab === "experience" ? <Experience /> : null}
               {viewTab === "projects" ? <BentoGridProjects /> : null}
-              {viewTab === "about me" ? (
-                <div>
-                  <CardTechnologies />
-                </div>
-              ) : null}
             </div>
           </div>
 
