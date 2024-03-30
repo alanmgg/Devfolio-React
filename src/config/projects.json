@@ -4,6 +4,7 @@
     "type": "Aplicación Web",
     "image": "macos.webp",
     "description": "Esta réplica meticulosa se basó en MacOS Big Sur y funcionó como mi portafolio personal en su momento. Desde la barra de menú hasta los iconos de las aplicaciones, cada elemento se recreó fielmente para proporcionar una experiencia auténtica para los visitantes. Esta recreación no solo demostró mi habilidad para trabajar con tecnologías frontend modernas, sino que también destacó mi atención al detalle y mi capacidad para crear interfaces de usuario intuitivas y atractivas.",
+    "url": "https://alancoding-macos.vercel.app/",
     "technologies": ["React", "Sass", "JavaScript"]
   },
   {
@@ -11,6 +12,7 @@
     "type": "Aplicación Web",
     "image": "crossy-road.webp",
     "description": "Desarrollé Crossy Road, un emocionante juego creado con Three.js que ofrece renders en 3D directamente en el navegador web. Utilizando tecnologías de vanguardia como Three.js, pude crear gráficos 3D impresionantes que brindan una experiencia inmersiva a los usuarios.",
+    "url": "https://alancoding.vercel.app/projects/crossy-road-game/index.html",
     "technologies": ["HTML", "CSS", "JavaScript", "Three.js"]
   },
   {
@@ -18,6 +20,7 @@
     "type": "Diseño de Figma",
     "image": "basic-look.webp",
     "description": "Diseñé la interfaz de usuario en Figma para una aplicación móvil destinada a la tienda de ropa Basic Look. Utilizando Figma, creé un diseño moderno y atractivo que reflejaba la identidad de la marca y proporcionaba una experiencia de usuario intuitiva y agradable.",
+    "url": "https://www.figma.com/file/Qqkt0eyEPcdFn3Esv9XiDZ/Basic-Look?type=design&node-id=2-2&mode=design",
     "technologies": ["Figma", "UX/UI"]
   },
   {
@@ -25,6 +28,7 @@
     "type": "Aplicación Móvil",
     "image": "crypto-market.webp",
     "description": "Aplicación móvil construida con React Native, que ofrece a los usuarios información en tiempo real sobre el valor de todas las criptomonedas. La aplicación se integra con la API de CoinGecko para proporcionar datos actualizados y precisos sobre el mercado de criptomonedas. Al utilizar React Native, pude desarrollar una aplicación multiplataforma que ofrece una experiencia de usuario fluida y receptiva en dispositivos iOS y Android.",
+    "url": "https://snack.expo.dev/@alanmgg/crypto-market",
     "technologies": ["React Native", "CSS"]
   },
   {
@@ -32,6 +36,7 @@
     "type": "Aplicación Web",
     "image": "landing-page-airpods.webp",
     "description": "Adopta el mismo estilo minimalista y elegante característico de las páginas web de Apple. Esta página, creada con HTML, CSS y Javascript, ofrece una experiencia de usuario similar a la de las páginas oficiales de Apple, con un diseño limpio, imágenes de alta calidad y una presentación intuitiva de las características y beneficios de los AirPods. Además, integré elementos interactivos utilizando Javascript para mejorar la experiencia del usuario, como animaciones sutiles y desplazamiento suave.",
+    "url": "https://alancoding.vercel.app/projects/landing-page-airpods/index.html",
     "technologies": ["HTML", "CSS", "JavaScript"]
   },
   {
@@ -39,6 +44,7 @@
     "type": "Aplicación Web",
     "image": "landing-page-coffee.webp",
     "description": "Utilizando JavaScript, creé una experiencia interactiva donde los elementos de la página, responden al movimiento del cursor, creando un efecto dinámico y atractivo. Esta animación no solo añade un toque divertido y creativo a la página, sino que también mejora la interacción del usuario, atrayendo su atención y proporcionando una experiencia memorable.",
+    "url": "https://alancoding.vercel.app/projects/landing-page-coffee/index.html",
     "technologies": ["HTML", "CSS", "JavaScript"]
   },
   {
@@ -46,6 +52,7 @@
     "type": "Aplicación Web",
     "image": "pokedex.webp",
     "description": "Desarrollé una Pokédex utilizando la API PokeAPI para mostrar información detallada de todos los Pokémon. Diseñé la interfaz de manera bonita e intuitiva para los usuarios, permitiéndoles explorar fácilmente la amplia variedad de Pokémon disponibles.",
+    "url": "https://alancoding-pokedex.vercel.app/dex/1",
     "technologies": ["NextJS", "CSS", "JavaScript"]
   },
   {
@@ -53,6 +60,7 @@
     "type": "Aplicación Web",
     "image": "curriculum.webp",
     "description": "Utilicé HTML, CSS y JavaScript para diseñar una interfaz elegante y funcional que muestra mi información profesional de manera clara y concisa. Además de la presentación visual, implementé la funcionalidad que permite a los usuarios exportar el CV y guardarlo en formato PDF para su conveniencia. Esta característica ofrece a los usuarios una forma fácil y rápida de almacenar o compartir mi CV en cualquier dispositivo.",
+    "url": "https://alancoding-cv.vercel.app/",
     "technologies": ["HTML", "CSS", "JavaScript"]
   }
 ]

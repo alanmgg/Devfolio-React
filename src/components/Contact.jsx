@@ -74,7 +74,7 @@ function Information() {
             />
           </div>
 
-          <button className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 font-bold">
+          <button className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold">
             Enviar
           </button>
         </div>
