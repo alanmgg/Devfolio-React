@@ -1,12 +1,18 @@
 import React from "react";
-import { FaMap, FaSuitcase, FaEdge } from "react-icons/fa";
+import {
+  FaMap,
+  FaSuitcase,
+  FaEdge,
+  FaLinkedin,
+  FaGithub
+} from "react-icons/fa";
 import SpanColor from "./SpanColor";
 
 function CardInfo() {
   return (
     <>
       <div className="font-open-sans flex xl:flex-col items-center">
-        <div className="p-4 bg-stone-100 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-gray-900">
+        <div className="p-4 bg-white rounded-lg dark:bg-gray-900">
           <h5 className="font-bold text-lg sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2">
             Sobre mí
           </h5>
@@ -53,6 +59,20 @@ function CardInfo() {
                 https://www.alanfmorag.tech/
               </a>
             </div>
+          </div>
+
+          <h5 className="font-bold text-lg sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2 mt-8">
+            Redes sociales
+          </h5>
+
+          <div className="flex flex-row mt-4">
+            <a href="https://www.linkedin.com/in/alanmgg/" className="mr-3">
+              <FaLinkedin className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300" />
+            </a>
+
+            <a href="https://github.com/alanmgg" className="mr-3">
+              <FaGithub className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300" />
+            </a>
           </div>
         </div>
       </div>

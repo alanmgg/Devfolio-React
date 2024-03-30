@@ -17,15 +17,15 @@ function ButtonSelect({ onSelectViewTab }) {
 
   return (
     <>
-      <div class="bg-stone-100 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20 dark:bg-gray-900">
+      <div class="bg-white rounded-lg dark:bg-gray-900">
         <div className="flex flex-row">
           {tabs !== null
             ? tabs.map((item) => (
                 <div
                   className={
                     item.field === selected
-                      ? "w-1/3 text-center hover:bg-stone-200 dark:hover:bg-gray-800 cursor-pointer border-b border-fuchsia-600 dark:border-lime-400"
-                      : "w-1/3 text-center hover:bg-stone-200 dark:hover:bg-gray-800 cursor-pointer"
+                      ? "w-1/3 text-center hover:bg-fuchsia-100 dark:hover:bg-gray-800 cursor-pointer border-b border-fuchsia-600 dark:border-lime-400"
+                      : "w-1/3 text-center hover:bg-fuchsia-100 dark:hover:bg-gray-800 cursor-pointer"
                   }
                   onClick={() => setSelected(item.field)}
                 >

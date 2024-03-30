@@ -5,6 +5,7 @@ import CardInfo from "./components/CardInfo";
 import ButtonSelect from "./components/ButtonSelect";
 import Experience from "./views/Experience";
 import BentoGridProjects from "./components/BentoGridProjects";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full bg-gradient-to-t from-zinc-200 dark:from-gray-800 to-zinc-100 dark:to-gray-900">
+      <div className="w-full h-full bg-gradient-to-t from-zinc-50 dark:from-gray-800 to-zinc-100 dark:to-gray-900">
         <div className="flex flex-col font-open-sans">
           <ButtonTheme />
 
@@ -34,6 +35,7 @@ function App() {
 
               {viewTab === "experience" ? <Experience /> : null}
               {viewTab === "projects" ? <BentoGridProjects /> : null}
+              {viewTab === "contact" ? <Contact /> : null}
             </div>
           </div>
 
