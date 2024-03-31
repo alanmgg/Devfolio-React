@@ -10,16 +10,21 @@ import Footer from "./components/Footer";
 
 function App() {
   const [viewTab, setViewTab] = useState("projects");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   function onSelectViewTab(selectViewTab) {
     setViewTab(selectViewTab);
+  }
+
+  function onUpdateTheme(updateTheme) {
+    setTheme(updateTheme);
   }
 
   return (
     <>
       <div className="w-full h-full bg-gradient-to-t from-zinc-50 dark:from-gray-800 to-zinc-100 dark:to-gray-900">
         <div className="flex flex-col font-open-sans">
-          <ButtonTheme />
+          <ButtonTheme onUpdateTheme={onUpdateTheme} />
 
           <div className="container mx-auto px-[300px] xl:px-0">
             <Header />
@@ -35,7 +40,7 @@ function App() {
 
               {viewTab === "experience" ? <Experience /> : null}
               {viewTab === "projects" ? <BentoGridProjects /> : null}
-              {viewTab === "contact" ? <Contact /> : null}
+              {viewTab === "contact" ? <Contact themeSelected={theme} /> : null}
             </div>
           </div>
 

@@ -17,11 +17,8 @@ function BentoGridProjects() {
       <div className="columns-2 sm:columns-1 gap-4 md:gap-1">
         {projects !== null
           ? projects.map((item) => (
-              <a href={item.url} target="_blank">
-                <div
-                  className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-100 hover:scale-105"
-                  key={item.name}
-                >
+              <a href={item.url} target="_blank" key={item.name}>
+                <div className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-100 hover:scale-105">
                   <div className="bg-stone-100 dark:bg-gray-900 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
                     <LazyLoadImage
                       src={"/projects/" + item.image}
@@ -45,7 +42,10 @@ function BentoGridProjects() {
 
                       <div className="mt-5">
                         {item.technologies.map((technologie) => (
-                          <span class="font-medium me-2 px-2.5 py-0.5 rounded text-xs bg-fuchsia-100 text-fuchsia-500 dark:bg-lime-900 dark:text-lime-400">
+                          <span
+                            className="font-medium me-2 px-2.5 py-0.5 rounded text-xs bg-fuchsia-100 text-fuchsia-500 dark:bg-lime-900 dark:text-lime-400"
+                            key={technologie}
+                          >
                             {technologie}
                           </span>
                         ))}

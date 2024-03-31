@@ -17,7 +17,7 @@ function ButtonSelect({ onSelectViewTab }) {
 
   return (
     <>
-      <div class="bg-white rounded-lg dark:bg-gray-900">
+      <div className="bg-white rounded-lg dark:bg-gray-900">
         <div className="flex flex-row">
           {tabs !== null
             ? tabs.map((item) => (
@@ -28,6 +28,7 @@ function ButtonSelect({ onSelectViewTab }) {
                       : "w-1/3 text-center hover:bg-fuchsia-100 dark:hover:bg-gray-800 cursor-pointer"
                   }
                   onClick={() => setSelected(item.field)}
+                  key={item.name}
                 >
                   <button
                     className={

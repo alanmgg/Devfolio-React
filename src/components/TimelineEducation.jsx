@@ -17,21 +17,24 @@ function TimelineEducation() {
           Educación
         </h5>
 
-        <ol class="relative border-s border-fuchsia-600 dark:border-lime-400">
+        <ol className="relative border-s border-fuchsia-600 dark:border-lime-400">
           {education !== null
             ? education.map((item) => (
-                <li class="bg-white rounded-lg dark:bg-gray-900 mb-8 ms-4 p-3">
-                  <div class="absolute w-3 h-3 bg-fuchsia-600 rounded-full mt-1.5 -start-1.5 border border-zinc-200 dark:border-gray-900 dark:bg-lime-400"></div>
+                <li
+                  className="bg-white rounded-lg dark:bg-gray-900 mb-8 ms-4 p-3"
+                  key={item.grade}
+                >
+                  <div className="absolute w-3 h-3 bg-fuchsia-600 rounded-full mt-1.5 -start-1.5 border border-zinc-200 dark:border-gray-900 dark:bg-lime-400"></div>
 
-                  <time class="mb-1 text-sm sm:text-xs font-bold leading-none text-fuchsia-600 dark:text-lime-400">
+                  <time className="mb-1 text-sm sm:text-xs font-bold leading-none text-fuchsia-600 dark:text-lime-400">
                     {item.date}
                   </time>
 
-                  <h3 class="text-base sm:text-sm font-semibold dark:text-white">
+                  <h3 className="text-base sm:text-sm font-semibold dark:text-white">
                     {item.grade}
                   </h3>
 
-                  <p class="mb-4 text-sm sm:text-xs font-medium text-gray-700 dark:text-gray-300">
+                  <p className="mb-4 text-sm sm:text-xs font-medium text-gray-700 dark:text-gray-300">
                     {item.description}
                   </p>
                 </li>

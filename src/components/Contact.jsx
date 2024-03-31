@@ -1,6 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+// API
+import { sendEmail } from "./../api/mail";
+// Spinner
+import ClockLoader from "react-spinners/ClockLoader";
 
-function Information() {
+function Contact({ themeSelected }) {
+  const emptyValues = { name: "", email: "", subject: "", message: "" };
+  const [form, setForm] = useState(emptyValues);
+  const [theme, setTheme] = useState(themeSelected);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTheme(themeSelected);
+  }, [themeSelected]);
+
+  function handleUpdateValues(type, value) {
+    switch (type) {
+      case "name":
+        setForm({ ...form, name: value });
+        break;
+      case "email":
+        setForm({ ...form, email: value });
+        break;
+      case "subject":
+        setForm({ ...form, subject: value });
+        break;
+      case "message":
+        setForm({ ...form, message: value });
+        break;
+      default:
+        break;
+    }
+  }
+
+  function handleSendEmail() {
+    setLoading(true);
+    sendEmail(form, loadEmailHandler, loadErrorHandler);
+  }
+
+  async function loadEmailHandler(response) {
+    if (response.ok) {
+      var response = await response.json();
+      if (response.message === "The form was submitted successfully.") {
+        setLoading(false);
+        setForm(emptyValues);
+      }
+
+      return;
+    }
+    if (response.status === 400) {
+      setLoading(false);
+      const error = await response.text();
+      throw new Error(error);
+    } else if (response.status === 401) {
+      setLoading(false);
+      const error = await response.json();
+    } else if (response.status === 404) {
+      setLoading(false);
+      const error = await response.json();
+    }
+    throw new Error("Network response was not ok");
+  }
+
+  function loadErrorHandler(error) {}
+
   return (
     <>
       <div className="font-open-sans mt-8">
@@ -11,56 +74,62 @@ function Information() {
 
           <div className="mb-2">
             <label
-              for="name"
-              class="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              htmlFor="name"
+              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
             >
               Nombre
             </label>
             <input
               type="text"
               id="name"
-              class="bg-stone-50 border border-stone-300 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
+              className="bg-white border border-fuchsia-400 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-lime-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
               placeholder="John Doe"
+              value={form.name}
+              onChange={(e) => handleUpdateValues("name", e.target.value)}
               required
             />
           </div>
 
           <div className="mb-2">
             <label
-              for="email"
-              class="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              htmlFor="email"
+              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
             >
               Correo
             </label>
             <input
               type="email"
               id="email"
-              class="bg-stone-50 border border-stone-300 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
+              className="bg-white border border-fuchsia-400 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-lime-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
               placeholder="jhondoe@mail.com"
+              value={form.email}
+              onChange={(e) => handleUpdateValues("email", e.target.value)}
               required
             />
           </div>
 
           <div className="mb-2">
             <label
-              for="subject"
-              class="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              htmlFor="subject"
+              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
             >
               Asunto
             </label>
             <input
               type="text"
               id="subject"
-              class="bg-stone-50 border border-stone-300 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
+              className="bg-white border border-fuchsia-400 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-lime-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
               placeholder="Subject"
+              value={form.subject}
+              onChange={(e) => handleUpdateValues("subject", e.target.value)}
               required
             />
           </div>
 
           <div className="mb-4">
             <label
-              for="message"
-              class="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              htmlFor="message"
+              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
             >
               Mensaje
             </label>
@@ -68,19 +137,38 @@ function Information() {
               type="text"
               id="message"
               rows="4"
-              class="bg-stone-50 border border-stone-300 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
+              className="bg-white border border-fuchsia-400 text-sm sm:text-xs rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-2.5 dark:bg-gray-800 dark:border-lime-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-lime-400 dark:focus:border-lime-400"
               placeholder="Message"
+              value={form.message}
+              onChange={(e) => handleUpdateValues("message", e.target.value)}
               required
             />
           </div>
 
-          <button className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold">
-            Enviar
-          </button>
+          {loading === false ? (
+            <button
+              className="w-full py-2 mb-3 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 hover:scale-105"
+              onClick={() => handleSendEmail()}
+            >
+              Enviar
+            </button>
+          ) : (
+            <button
+              className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 hover:scale-105"
+              onClick={() => handleSendEmail()}
+            >
+              <ClockLoader
+                color={theme === "light" ? "#FFFFFF" : "#000000"}
+                size={20}
+                speedMultiplier={2}
+                className="flex justify-center mt-2"
+              />
+            </button>
+          )}
         </div>
       </div>
     </>
   );
 }
 
-export default Information;
+export default Contact;
