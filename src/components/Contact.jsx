@@ -3,38 +3,62 @@ import React, { useEffect, useState } from "react";
 import { sendEmail } from "./../api/mail";
 // Spinner
 import ClockLoader from "react-spinners/ClockLoader";
+// Notification
+import { pushNotification } from "../utils/notifications";
 
 function Contact({ themeSelected }) {
   const emptyValues = { name: "", email: "", subject: "", message: "" };
   const [form, setForm] = useState(emptyValues);
   const [theme, setTheme] = useState(themeSelected);
   const [loading, setLoading] = useState(false);
+  const [enableButton, setEnableButton] = useState(true);
 
   useEffect(() => {
     setTheme(themeSelected);
   }, [themeSelected]);
 
   function handleUpdateValues(type, value) {
+    let copyForm = { ...form };
     switch (type) {
       case "name":
         setForm({ ...form, name: value });
+        copyForm = { ...form, name: value };
         break;
       case "email":
         setForm({ ...form, email: value });
+        copyForm = { ...form, email: value };
         break;
       case "subject":
         setForm({ ...form, subject: value });
+        copyForm = { ...form, subject: value };
         break;
       case "message":
         setForm({ ...form, message: value });
+        copyForm = { ...form, message: value };
         break;
       default:
         break;
+    }
+
+    inputValidation(copyForm);
+  }
+
+  function inputValidation(copyForm) {
+    if (
+      copyForm.name !== "" &&
+      copyForm.email !== "" &&
+      copyForm.subject !== "" &&
+      copyForm.message !== ""
+    ) {
+      setEnableButton(false);
+    } else {
+      setEnableButton(true);
     }
   }
 
   function handleSendEmail() {
     setLoading(true);
+    pushNotification("info", "Enviando correo...", theme);
     sendEmail(form, loadEmailHandler, loadErrorHandler);
   }
 
@@ -42,20 +66,25 @@ function Contact({ themeSelected }) {
     if (response.ok) {
       var response = await response.json();
       if (response.message === "The form was submitted successfully.") {
+        pushNotification("success", "Correo enviado", theme);
         setLoading(false);
         setForm(emptyValues);
+        setEnableButton(true);
       }
 
       return;
     }
     if (response.status === 400) {
+      pushNotification("error", "Correo no enviado", theme);
       setLoading(false);
       const error = await response.text();
       throw new Error(error);
     } else if (response.status === 401) {
+      pushNotification("error", "Correo no enviado", theme);
       setLoading(false);
       const error = await response.json();
     } else if (response.status === 404) {
+      pushNotification("error", "Correo no enviado", theme);
       setLoading(false);
       const error = await response.json();
     }
@@ -147,16 +176,14 @@ function Contact({ themeSelected }) {
 
           {loading === false ? (
             <button
-              className="w-full py-2 mb-3 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 hover:scale-105"
+              className="w-full py-2 mb-3 rounded-lg bg-fuchsia-600 dark:bg-lime-400 disabled:bg-fuchsia-300 dark:disabled:bg-lime-700 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 enabled:hover:scale-105"
+              disabled={enableButton}
               onClick={() => handleSendEmail()}
             >
               Enviar
             </button>
           ) : (
-            <button
-              className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 hover:scale-105"
-              onClick={() => handleSendEmail()}
-            >
+            <button className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold">
               <ClockLoader
                 color={theme === "light" ? "#FFFFFF" : "#000000"}
                 size={20}

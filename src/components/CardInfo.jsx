@@ -43,7 +43,7 @@ function CardInfo() {
               <a
                 href="https://www.babelgroup.com/"
                 target="_blank"
-                className="text-sm sm:text-xs text-gray-700 dark:text-gray-300"
+                className="text-sm sm:text-xs text-gray-700 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-lime-400"
               >
                 Babel
               </a>
@@ -54,7 +54,7 @@ function CardInfo() {
               <a
                 href="https://www.alancoding.tech/"
                 target="_blank"
-                className="text-sm sm:text-xs text-gray-700 dark:text-gray-300"
+                className="text-sm sm:text-xs text-gray-700 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-lime-400"
               >
                 https://www.alancoding.tech/
               </a>
@@ -66,12 +66,20 @@ function CardInfo() {
           </h5>
 
           <div className="flex flex-row mt-4">
-            <a href="https://www.linkedin.com/in/alanmgg/" className="mr-3">
-              <FaLinkedin className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300" />
+            <a
+              href="https://www.linkedin.com/in/alanmgg/"
+              target="_blank"
+              className="mr-3"
+            >
+              <FaLinkedin className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-lime-400" />
             </a>
 
-            <a href="https://github.com/alanmgg" className="mr-3">
-              <FaGithub className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300" />
+            <a
+              href="https://github.com/alanmgg"
+              target="_blank"
+              className="mr-3"
+            >
+              <FaGithub className="text-2xl sm:text-lg text-gray-700 dark:text-gray-300 hover:text-fuchsia-600 dark:hover:text-lime-400" />
             </a>
           </div>
         </div>
