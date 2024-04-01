@@ -19,7 +19,7 @@ function BentoGridProjects() {
           ? projects.map((item) => (
               <a href={item.url} target="_blank" key={item.name}>
                 <div className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-100 hover:scale-105">
-                  <div className="bg-stone-100 dark:bg-gray-900 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
+                  <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
                     <LazyLoadImage
                       src={"/projects/" + item.image}
                       alt={item.name}
