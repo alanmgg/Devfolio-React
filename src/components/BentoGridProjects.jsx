@@ -13,30 +13,30 @@ function BentoGridProjects() {
   }, []);
 
   return (
-    <div className="font-open-sans mt-8">
-      <div className="columns-2 sm:columns-1 gap-4 md:gap-1">
+    <div className="mt-8 font-open-sans">
+      <div className="gap-4 columns-2 sm:columns-1 md:gap-1">
         {projects !== null
           ? projects.map((item) => (
               <a href={item.url} target="_blank" key={item.name}>
-                <div className="break-inside-avoid-column mb-5 xl:mb-5 cursor-pointer transform transition duration-100 hover:scale-105">
-                  <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg shadow-gray-500/20 dark:shadow-gray-200/20">
+                <div className="mb-5 transition duration-100 transform cursor-pointer break-inside-avoid-column xl:mb-5 hover:scale-105">
+                  <div className="bg-white rounded-lg shadow-lg dark:bg-gray-900 shadow-gray-500/20 dark:shadow-gray-200/20">
                     <LazyLoadImage
                       src={"/projects/" + item.image}
                       alt={item.name}
-                      className="rounded-lg w-full"
+                      className="w-full rounded-lg"
                       effect="blur"
                     />
 
                     <div className="p-4">
-                      <p className="text-sm dark:text-white font-light mt-5">
+                      <p className="mt-5 text-sm font-light dark:text-white">
                         {item.type}
                       </p>
 
-                      <h1 className="font-bold text-xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-600 dark:to-lime-500 bg-clip-text text-transparent">
+                      <h1 className="text-xl font-bold text-transparent bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-pink-600 dark:to-lime-500 bg-clip-text">
                         {item.name}
                       </h1>
 
-                      <p className="text-xs sm:text-xs dark:text-white mt-5">
+                      <p className="mt-5 text-xs sm:text-xs dark:text-white">
                         {item.description}
                       </p>
 

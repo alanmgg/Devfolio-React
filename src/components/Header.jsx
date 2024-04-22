@@ -2,11 +2,12 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import ButtonInfo from "./ButtonInfo";
+import "./../assets/Header.css";
 
 function Header() {
   return (
     <>
-      <header className="font-open-sans flex flex-row xl:flex-col items-center">
+      <header className="flex flex-row items-center font-open-sans xl:flex-col">
         <div className="mr-12 xl:mr-0 xl:mb-5 xl:items-center">
           <LazyLoadImage
             src="/img/Profile.webp"
@@ -22,11 +23,11 @@ function Header() {
             Ingeniero en computación - Software Engineer DevOps
           </p>
 
-          <h1 className="font-bold text-3xl sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 to-green-400 dark:to-orange-300 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold text-transparent sm:text-3xl bg-gradient-to-r from-fuchsia-600 dark:from-lime-400 via-blue-400 dark:via-red-400 to-green-400 dark:to-orange-300 bg-clip-text bg-300% animate-gradient">
             Alan Francisco Mora González
           </h1>
 
-          <p className="font-medium text-lg sm:text-base mt-3 dark:text-white">
+          <p className="mt-3 text-lg font-medium sm:text-base dark:text-white">
             Hablar es barato. Muéstrame el código.
           </p>
 

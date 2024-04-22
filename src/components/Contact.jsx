@@ -95,16 +95,16 @@ function Contact({ themeSelected }) {
 
   return (
     <>
-      <div className="font-open-sans mt-8">
+      <div className="mt-8 font-open-sans">
         <div className="p-4 bg-white rounded-lg dark:bg-gray-900">
-          <h5 className="font-bold text-lg sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2 mb-4">
+          <h5 className="py-2 mb-4 text-lg font-bold border-b sm:text-sm dark:text-white border-fuchsia-600 dark:border-lime-400">
             Trabajemos juntos
           </h5>
 
           <div className="mb-2">
             <label
               htmlFor="name"
-              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              className="block mb-2 text-sm font-medium sm:text-xs dark:text-white"
             >
               Nombre
             </label>
@@ -122,7 +122,7 @@ function Contact({ themeSelected }) {
           <div className="mb-2">
             <label
               htmlFor="email"
-              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              className="block mb-2 text-sm font-medium sm:text-xs dark:text-white"
             >
               Correo
             </label>
@@ -140,7 +140,7 @@ function Contact({ themeSelected }) {
           <div className="mb-2">
             <label
               htmlFor="subject"
-              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              className="block mb-2 text-sm font-medium sm:text-xs dark:text-white"
             >
               Asunto
             </label>
@@ -158,7 +158,7 @@ function Contact({ themeSelected }) {
           <div className="mb-4">
             <label
               htmlFor="message"
-              className="block mb-2 text-sm sm:text-xs font-medium dark:text-white"
+              className="block mb-2 text-sm font-medium sm:text-xs dark:text-white"
             >
               Mensaje
             </label>
@@ -176,14 +176,14 @@ function Contact({ themeSelected }) {
 
           {loading === false ? (
             <button
-              className="w-full py-2 mb-3 rounded-lg bg-fuchsia-600 dark:bg-lime-400 disabled:bg-fuchsia-300 dark:disabled:bg-lime-700 text-white dark:text-gray-900 text-lg sm:text-sm font-bold transform transition duration-100 enabled:hover:scale-105"
+              className="w-full py-2 mb-3 text-lg font-bold text-white transition duration-100 transform rounded-lg bg-fuchsia-600 dark:bg-lime-400 disabled:bg-fuchsia-300 dark:disabled:bg-lime-700 dark:text-gray-900 sm:text-sm enabled:hover:scale-105"
               disabled={enableButton}
               onClick={() => handleSendEmail()}
             >
               Enviar
             </button>
           ) : (
-            <button className="w-full py-2 rounded-lg bg-fuchsia-600 dark:bg-lime-400 text-white dark:text-gray-900 text-lg sm:text-sm font-bold">
+            <button className="w-full py-2 text-lg font-bold text-white rounded-lg bg-fuchsia-600 dark:bg-lime-400 dark:text-gray-900 sm:text-sm">
               <ClockLoader
                 color={theme === "light" ? "#FFFFFF" : "#000000"}
                 size={20}

@@ -1,17 +1,17 @@
 [
   {
-    "position": "Software Engineer DevOps, Babel",
     "date": "Enero, 2024 - Actualidad",
-    "description": "Desarrollo aplicaciones con Vue.js y las despliego en GCP. Implemento prácticas DevOps para garantizar despliegues eficientes y pruebas exhaustivas para asegurar la calidad del software. Gestiono contenedores Docker, documentación y promuevo metodologías ágiles para entregas rápidas y adaptativas."
+    "description": "Desarrollo aplicaciones con Vue.js y las despliego en GCP. Implemento prácticas DevOps para garantizar despliegues eficientes y pruebas exhaustivas para asegurar la calidad del software. Gestiono contenedores Docker, documentación y promuevo metodologías ágiles para entregas rápidas y adaptativas.",
+    "position": "Software Engineer DevOps, Babel"
   },
   {
-    "position": "Python Developer, Cyttek Group México",
     "date": "Agosto, 2023 - Dicimbre 2023",
-    "description": "Desarrollo de software utilizando Django, orientado a mejorar la comunicación entre cajeros bancarios y sus agentes. Especializado en el desarrollo de aplicaciones, garantizando la seguridad de datos y el cumplimiento de normativas. Destacado en pruebas, soporte y gestión eficiente de recursos."
+    "description": "Desarrollo de software utilizando Django, orientado a mejorar la comunicación entre cajeros bancarios y sus agentes. Especializado en el desarrollo de aplicaciones, garantizando la seguridad de datos y el cumplimiento de normativas. Destacado en pruebas, soporte y gestión eficiente de recursos.",
+    "position": "Python Developer, Cyttek Group México"
   },
   {
-    "position": "Web Developer, Abricot",
     "date": "Marzo, 2021 - Agosto, 2023",
-    "description": "Experiencia en el uso de React JS para el frontend y FastAPI con Python para el backend. Capacidad probada para desarrollar soluciones robustas y escalables, cumpliendo con los estándares de calidad del mercado."
+    "description": "Experiencia en el uso de React JS para el frontend y FastAPI con Python para el backend. Capacidad probada para desarrollar soluciones robustas y escalables, cumpliendo con los estándares de calidad del mercado.",
+    "position": "Web Developer, Abricot"
   }
 ]

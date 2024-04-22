@@ -25,7 +25,7 @@ function ButtonTheme({ onUpdateTheme }) {
   return (
     <>
       <button
-        className="w-11 ml-5 my-8 p-3 text-xl dark:text-gray-400 hover:bg-fuchsia-100 dark:hover:bg-gray-800 transition duration-100 hover:scale-105"
+        className="p-3 my-8 ml-5 text-xl transition duration-100 w-11 dark:text-gray-400 hover:bg-fuchsia-100 dark:hover:bg-gray-800 hover:scale-105"
         onClick={handleChangeTheme}
       >
         {theme === "light" ? <FaRegMoon /> : <FaRegSun />}

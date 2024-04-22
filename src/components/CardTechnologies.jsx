@@ -14,19 +14,19 @@ function CardTechnologies() {
 
   return (
     <>
-      <div className="font-open-sans mt-8">
-        <h5 className="font-bold text-lg sm:text-sm dark:text-white border-b border-fuchsia-600 dark:border-lime-400 py-2">
+      <div className="mt-8 font-open-sans">
+        <h5 className="py-2 text-lg font-bold border-b sm:text-sm dark:text-white border-fuchsia-600 dark:border-lime-400">
           Habilidades y tecnologías
         </h5>
 
-        <div className="grid grid-cols-4 sm:grid-cols-2 gap-4 md:gap-2 mt-6">
+        <div className="grid grid-cols-4 gap-4 mt-6 sm:grid-cols-2 md:gap-2">
           {technologies !== null
             ? technologies.map((item) => (
                 <div
-                  className="mb-3 cursor-pointer transform transition duration-100 hover:scale-105"
+                  className="mb-3 transition duration-100 transform cursor-pointer hover:scale-105"
                   key={item.name}
                 >
-                  <div className="bg-white dark:bg-gray-900 rounded-lg flex items-center px-5 h-12">
+                  <div className="flex items-center h-12 px-5 bg-white rounded-lg dark:bg-gray-900">
                     <LazyLoadImage
                       src={"/img/technologies/" + item.image}
                       alt={item.name}
@@ -34,7 +34,7 @@ function CardTechnologies() {
                       effect="blur"
                     />
 
-                    <p className="text-xs sm:text-xs dark:text-white ml-3">
+                    <p className="ml-3 text-xs sm:text-xs dark:text-white">
                       {item.name}
                     </p>
                   </div>

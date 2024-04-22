@@ -1,38 +1,146 @@
 [
-  { "name": "HTML", "image": "html.svg" },
-  { "name": "CSS", "image": "css.svg" },
-  { "name": "Javascript", "image": "javascript.svg" },
-  { "name": "Python", "image": "python.svg" },
-  { "name": "Bash", "image": "bash.svg" },
-  { "name": "React", "image": "react.svg" },
-  { "name": "Vue.js", "image": "vue.svg" },
-  { "name": "Next.js", "image": "next-js.svg" },
-  { "name": "Angular", "image": "angular.svg" },
-  { "name": "Node.js", "image": "node.svg" },
-  { "name": "FastApi", "image": "fastapi.svg" },
-  { "name": "Flask", "image": "flask.svg" },
-  { "name": "Django", "image": "django.svg" },
-  { "name": "Firebase", "image": "firebase.svg" },
-  { "name": "MongoDB", "image": "mongo-db.svg" },
-  { "name": "Vagrant", "image": "vagrant.svg" },
-  { "name": "Docker", "image": "docker.svg" },
-  { "name": "Kubernetes", "image": "kubernetes.svg" },
-  { "name": "Jenkins", "image": "jenkins.svg" },
-  { "name": "Ansible", "image": "ansible.svg" },
-  { "name": "RabbitMQ", "image": "rabbit-mq.svg" },
-  { "name": "Amazon Web Services", "image": "aws.svg" },
-  { "name": "Google Cloud Platform", "image": "gcp.svg" },
-  { "name": "Heroku", "image": "heroku.svg" },
-  { "name": "MySQL", "image": "mysql.svg" },
-  { "name": "MariaDB", "image": "maria-db.svg" },
-  { "name": "PostgreSQL", "image": "postgresql.svg" },
-  { "name": "VS Code", "image": "vs-code.svg" },
-  { "name": "Git", "image": "git.svg" },
-  { "name": "GitKraken", "image": "gitkraken.svg" },
-  { "name": "BitBucket", "image": "bitbucket.svg" },
-  { "name": "Jira", "image": "jira.svg" },
-  { "name": "Confluence", "image": "confluence.svg" },
-  { "name": "SonarQube", "image": "sonarqube.svg" },
-  { "name": "Linux", "image": "linux.svg" },
-  { "name": "Scrum Developer", "image": "scrum.svg" }
+  {
+    "image": "html.svg",
+    "name": "HTML"
+  },
+  {
+    "image": "css.svg",
+    "name": "CSS"
+  },
+  {
+    "image": "javascript.svg",
+    "name": "Javascript"
+  },
+  {
+    "image": "python.svg",
+    "name": "Python"
+  },
+  {
+    "image": "bash.svg",
+    "name": "Bash"
+  },
+  {
+    "image": "react.svg",
+    "name": "React"
+  },
+  {
+    "image": "vue.svg",
+    "name": "Vue.js"
+  },
+  {
+    "image": "next-js.svg",
+    "name": "Next.js"
+  },
+  {
+    "image": "angular.svg",
+    "name": "Angular"
+  },
+  {
+    "image": "node.svg",
+    "name": "Node.js"
+  },
+  {
+    "image": "fastapi.svg",
+    "name": "FastApi"
+  },
+  {
+    "image": "flask.svg",
+    "name": "Flask"
+  },
+  {
+    "image": "django.svg",
+    "name": "Django"
+  },
+  {
+    "image": "firebase.svg",
+    "name": "Firebase"
+  },
+  {
+    "image": "mongo-db.svg",
+    "name": "MongoDB"
+  },
+  {
+    "image": "vagrant.svg",
+    "name": "Vagrant"
+  },
+  {
+    "image": "docker.svg",
+    "name": "Docker"
+  },
+  {
+    "image": "kubernetes.svg",
+    "name": "Kubernetes"
+  },
+  {
+    "image": "jenkins.svg",
+    "name": "Jenkins"
+  },
+  {
+    "image": "ansible.svg",
+    "name": "Ansible"
+  },
+  {
+    "image": "rabbit-mq.svg",
+    "name": "RabbitMQ"
+  },
+  {
+    "image": "aws.svg",
+    "name": "Amazon Web Services"
+  },
+  {
+    "image": "gcp.svg",
+    "name": "Google Cloud Platform"
+  },
+  {
+    "image": "heroku.svg",
+    "name": "Heroku"
+  },
+  {
+    "image": "mysql.svg",
+    "name": "MySQL"
+  },
+  {
+    "image": "maria-db.svg",
+    "name": "MariaDB"
+  },
+  {
+    "image": "postgresql.svg",
+    "name": "PostgreSQL"
+  },
+  {
+    "image": "vs-code.svg",
+    "name": "VS Code"
+  },
+  {
+    "image": "git.svg",
+    "name": "Git"
+  },
+  {
+    "image": "gitkraken.svg",
+    "name": "GitKraken"
+  },
+  {
+    "image": "bitbucket.svg",
+    "name": "BitBucket"
+  },
+  {
+    "image": "jira.svg",
+    "name": "Jira"
+  },
+  {
+    "image": "confluence.svg",
+    "name": "Confluence"
+  },
+  {
+    "image": "sonarqube.svg",
+    "name": "SonarQube"
+  },
+  {
+    "image": "linux.svg",
+    "name": "Linux"
+  },
+  {
+    "image": "scrum.svg",
+    "name": "Scrum Developer"
+  }
 ]
